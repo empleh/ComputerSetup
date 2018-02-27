@@ -1,4 +1,4 @@
-; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
+﻿; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
 ; This script has a special filename and path because it is automatically
@@ -22,6 +22,23 @@ else
 	Run Notepad
 return
 
+ToggleFireFoxDevToolBox(){
+   WinGet, id, list, , , Program Manager
+   Loop, %id%
+   {
+    this_id := id%A_Index%
+    WinGetClass, this_class, ahk_id %this_id%
+    WinGetTitle, this_title, ahk_id %this_id%
+    
+    If (this_class = "MozillaWindowClass"){
+    toExclude = Firefox
+      IfNotInString this_title, %toExclude% 
+      {
+         ToggleWinMinimize(this_title)
+      } 
+    }
+   } 
+}
 
 ToggleWinMinimize(TheWindowTitle)
 {
@@ -43,21 +60,37 @@ Else
 Return
 }
 
-!1::ToggleWinMinimize("Firefox")
+!9:: 
+   WinGetClass, class, A
+   WinGetTitle, title, A
+   MsgBox, The active window's class is "%class%" and Title is %title%.
+
+!W::ToggleWinMinimize("Firefox")
 
 !2::ToggleWinMinimize("Microsoft Visual Studio")
 
-!3::ToggleWinMinimize("SQL Server Management")
+!4::ToggleWinMinimize("SQL Server Management")
 
-!5::ToggleWinMinimize("Clover")
+!3::ToggleWinMinimize("WebStorm")
 
-!4::ToggleWinMinimize("Chrome")
+!1::ToggleWinMinimize("Internet Explorer")
 
 !Q::ToggleWinMinimize("Outlook")
 
-!W::ToggleWinMinimize("iTunes")
+!5::ToggleWinMinimize("Chrome")
 
-!E::ToggleWinMinimize("Firebug")
+!E::ToggleFireFoxDevToolBox()
+
+!D::ToggleWinMinimize("Developer Tools")
+
+!G::ToggleWinMinimize("GitKraken")
+
+!P::ToggleWinMinimize("Postman")
+
+!C::ToggleWinMinimize("Visual Studio Code")
+
+#Left::Browser_Back
+#Right::Browser_Forward
 
 +#Up::
     WinGetActiveTitle, Title
@@ -71,13 +104,53 @@ return
    WinMove, %Title%,,0,30,500, 500
 return
 
+::cl::
+SEND console.log();
+SEND {LEFT}{LEFT}
+return
+
+::{{shrug}}::
+SendInput, ¯\_(ツ)_/¯
+return
+
+::{{lenny}}::
+SendInput, ( ͡° ͜ʖ ͡°)
+return
+
+::{{takemyenergy}}::
+SendInput, ༼ つ ◕_◕ ༽つ
+return
+
+::{{yeah}}::
+SendInput, ( •_•)
+Send, +{Enter}
+SendInput, ( •_•)>⌐■-■
+Send, +{Enter}
+SendInput, (⌐■_■)
+return
+
+;::enterprise::
+;                                   _______
+; ___.--------._____________,------' -----.`----._
+; \                           `  -  .  _         /\
+;  `.__________                           `  -  |  |                 __,---"-._
+;              `-----------.______             ,'_/  ________,------'___________`----.___________
+;                                 `-----.____,'      \===========================================/
+;                                       |   :|        >--------------.----------.---------------'
+;                                       /   :|   _,--'          ,--'  `--.__.--'
+;                                      /   : |--'______________/_
+;                                ,---,'    :  \__________________`--.
+;                               `__________                        |/|
+;                                          `------._               |\|
+;                                                    `--._________,-'
+;return
+
+
+::gd::GETDATE()
+
 Insert::
 
-While, 1
-{
- WinWaitActive, Rename ahk_class #32770
- send y
-}
+::jsStack::var e = new Error('dummy');`rvar stack = e.stack;`rconsole.log(stack);
 
 
 ; Note: From now on whenever you run AutoHotkey directly, this script
@@ -86,4 +159,3 @@ While, 1
 ; Please read the QUICK-START TUTORIAL near the top of the help file.
 ; It explains how to perform common automation tasks such as sending
 ; keystrokes and mouse clicks.  It also explains more about hotkeys.
-
