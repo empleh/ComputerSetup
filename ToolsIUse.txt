@@ -1,0 +1,12 @@
+- Chocolatey
+- AutoHotKey
+- Promptu
+
+
+VS Extensions
+- Custom Document Well
+- My Color Theme
+
+WebStorm
+Visual Studio
+GitKraken

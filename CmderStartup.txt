@@ -1,0 +1,2 @@
+ cmd /k RenameTab "AgriLytic Git" & -new_console:d:C:\fcsamerica.git\AgriLytic"%ConEmuDrive%\Program Files (x86)\Git\bin\sh.exe" --login -i -new_console:C:"%ConEmuDrive%\Program Files (x86)\Git\etc\git.ico"
+ cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:%USERPROFILE%

@@ -60,12 +60,28 @@ Else
 Return
 }
 
+ToggleByProcess(processName)
+{
+SetTitleMatchMode,2
+DetectHiddenWindows, Off
+
+WinGetTitle, process_title, ahk_exe %processName%
+WinGet, winid, ID, %process_title%
+DllCall("SwitchToThisWindow", "UInt", winid, "UInt", 1)
+
+Return
+}
+
 !9:: 
    WinGetClass, class, A
    WinGetTitle, title, A
-   MsgBox, The active window's class is "%class%" and Title is %title%.
+   WinGet, process, ProcessName, A
+   WinGetTitle, process_title, ahk_exe %process%
+   MsgBox, The active window's class is "%class%" and Title is %title% and Process is %process% and Title from Process is %process_title%.
 
-!W::ToggleWinMinimize("Firefox")
+!W::ToggleByProcess("vivaldi.exe")
+
+!Q::ToggleByProcess("vivaldi.exe")
 
 !2::ToggleWinMinimize("Microsoft Visual Studio")
 
@@ -74,8 +90,6 @@ Return
 !3::ToggleWinMinimize("WebStorm")
 
 !1::ToggleWinMinimize("Internet Explorer")
-
-!Q::ToggleWinMinimize("Outlook")
 
 !5::ToggleWinMinimize("Chrome")
 
@@ -107,6 +121,14 @@ return
 ::cl::
 SEND console.log();
 SEND {LEFT}{LEFT}
+return
+
+::emailw::
+SEND christian.peters@fcsamerica.com
+return
+
+::emailg::
+SEND christian.peters@gmail.com
 return
 
 ::{{shrug}}::

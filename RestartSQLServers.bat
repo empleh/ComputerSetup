@@ -1,0 +1,2 @@
+NET STOP "SQL Server (SQL2012)"
+NET START "SQL Server (SQL2012)"
