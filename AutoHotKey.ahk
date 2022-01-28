@@ -79,29 +79,46 @@ Return
    WinGetTitle, process_title, ahk_exe %process%
    MsgBox, The active window's class is "%class%" and Title is %title% and Process is %process% and Title from Process is %process_title%.
 
-!W::ToggleByProcess("vivaldi.exe")
 
-!Q::ToggleByProcess("vivaldi.exe")
 
-!2::ToggleWinMinimize("Microsoft Visual Studio")
+!1::ToggleWinMinimize("Microsoft Visual Studio")
+
+!3::ToggleByProcess("WebStorm64.exe")
+
+!2::ToggleByProcess("rider64.exe")
 
 !4::ToggleWinMinimize("SQL Server Management")
 
-!3::ToggleWinMinimize("WebStorm")
+!5::ToggleWinMinimize("Azure Data Studio")
 
-!1::ToggleWinMinimize("Internet Explorer")
 
-!5::ToggleWinMinimize("Chrome")
 
-!E::ToggleFireFoxDevToolBox()
+!Q::ToggleWinMinimize("Inbox - christian.peters@orion.com")
+
+!W::ToggleWinMinimize("Mozilla Firefox")
+
+!E::ToggleWinMinimize("Firefox Developer")
+
+!R::ToggleWinMinimize("Chrome")
+
+!B::ToggleByProcess("msedge.exe")
+
+!P::ToggleByProcess("WindowsTerminal.exe")
+
+!T::ToggleByProcess("Teams.exe")
+
 
 !D::ToggleWinMinimize("Developer Tools")
 
 !G::ToggleWinMinimize("GitKraken")
 
-!P::ToggleWinMinimize("Postman")
+!L::ToggleWinMinimize("Postman")
 
 !C::ToggleWinMinimize("Visual Studio Code")
+
+!S::ToggleWinMinimize("Slack")
+
+!Z::ToggleWinMinimize("Zoom Meeting")
 
 #Left::Browser_Back
 #Right::Browser_Forward
@@ -123,12 +140,33 @@ SEND console.log();
 SEND {LEFT}{LEFT}
 return
 
+::clng::
+SEND console.log(angular.copy());
+SEND {LEFT}{LEFT}{LEFT}
+return
+
 ::emailw::
-SEND christian.peters@fcsamerica.com
+SEND christian.peters@orion.com
 return
 
 ::emailg::
 SEND christian.peters@gmail.com
+return
+
+::toThings::
+SEND add-to-things-mqlmqk6rrp1tsvqy2m8@things.email
+return
+
+::zoomies::
+SEND https://us02web.zoom.us/j/7423294392?pwd=YjRxZjJ0UU10djE3TlBVU3hhMlo3Zz09
+return
+
+::zoomw::
+SEND https://orion.zoom.us/j/5854645172
+return
+
+::zoomt::
+SEND https://orion.zoom.us/j/2662179404
 return
 
 ::{{shrug}}::
@@ -141,6 +179,14 @@ return
 
 ::{{takemyenergy}}::
 SendInput, ༼ つ ◕_◕ ༽つ
+return
+
+::devteam::
+SEND Derek Waskel, Lauren Vanderneck, Kevin Tighe
+return
+
+::devdomain::
+SEND Derek Waskel, Lauren Vanderneck, Kevin Tighe, Jan-Michael Williams, Greg Christensen, Manesha Chandran, Jace Ronnenkamp, Torry Taylor, Trevor Hacker, Jeff Kee, Jordan Gibson
 return
 
 ::{{yeah}}::
