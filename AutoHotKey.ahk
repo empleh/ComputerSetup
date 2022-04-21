@@ -83,7 +83,7 @@ Return
 
 !1::ToggleWinMinimize("Microsoft Visual Studio")
 
-!3::ToggleByProcess("WebStorm64.exe")
+!3::ToggleByProcess("webstorm64.exe")
 
 !2::ToggleByProcess("rider64.exe")
 
@@ -168,6 +168,11 @@ return
 ::zoomt::
 SEND https://orion.zoom.us/j/2662179404
 return
+
+::compn::
+SEND LT1412-ORION
+return
+
 
 ::{{shrug}}::
 SendInput, ¯\_(ツ)_/¯
