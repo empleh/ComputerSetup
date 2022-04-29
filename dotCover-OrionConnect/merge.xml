@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MergeParams>
+  <Source>Output-WebApi.dcvr</Source>
+  <Source>Output-DataProcess.dcvr</Source>
+  <Source>Output-DataAccess.dcvr</Source>
+  <Source>Output-DataModel.dcvr</Source>
+  <Source>Output-Public.dcvr</Source>
+  <Output>Output-MergedSnapshots.dcvr</Output>
+</MergeParams>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReportParams>
+  <Source>Output-MergedSnapshots.dcvr</Source>
+  <Output>_Results.html</Output>
+  <ReportType>html</ReportType>
+</ReportParams>

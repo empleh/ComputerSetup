@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageParams>
+    <TargetExecutable>%UserProfile%\.nuget\packages\xunit.runner.console\2.4.1\tools\net472\xunit.console.exe</TargetExecutable>
+    <TargetArguments>C:\SourceControl\OAT\WebApi\OAS.WebApi\OAS.DataAccess.UnitTest\bin\Debug\OAS.DataAccess.UnitTest.dll -trait "Owner=Reporting"</TargetArguments>
+    <Output>Output-DataAccess.dcvr</Output>
+    <Filters>
+        <IncludeFilters>
+            <FilterEntry>
+                <ModuleMask>OAS.DataProcess</ModuleMask>
+                <ClassMask>OAS.DataProcess.Reporting*</ClassMask>
+                <FunctionMask>*</FunctionMask>
+            </FilterEntry>
+            <FilterEntry>
+                <ModuleMask>OAS.DataProcess</ModuleMask>
+                <ClassMask>OAS.DataProcess.DTO.Reporting*</ClassMask>
+                <FunctionMask>*</FunctionMask>
+            </FilterEntry>
+            <FilterEntry>
+                <ModuleMask>OAS.WebApi.DTO</ModuleMask>
+                <ClassMask>OAS.WebApi.DTO.Reporting*</ClassMask>
+                <FunctionMask>*</FunctionMask>
+            </FilterEntry>
+            <FilterEntry>
+                <ModuleMask>OAS.DataAccess</ModuleMask>
+                <ClassMask>OAS.DataAccess.Domains.Reporting*</ClassMask>
+                <FunctionMask>*</FunctionMask>
+            </FilterEntry>
+            <FilterEntry>
+                <ModuleMask>OAS.Public</ModuleMask>
+                <ClassMask>OAS.DataModel.Reporting*</ClassMask>
+                <FunctionMask>*</FunctionMask>
+            </FilterEntry>
+            <FilterEntry>
+                <ModuleMask>OAS.DataModel</ModuleMask>
+                <ClassMask>OAS.DataModel.Reporting*</ClassMask>
+                <FunctionMask>*</FunctionMask>
+            </FilterEntry>
+        </IncludeFilters>
+    </Filters>
+</CoverageParams>
